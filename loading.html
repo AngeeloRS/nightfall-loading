@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Nightfall Syndicate TTT Server</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background: #0b0b0f;
+        font-family: Arial, sans-serif;
+        color: #e0e0e0;
+        overflow: hidden;
+    }
+
+    .center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 48px;
+        color: #8a2be2;
+        text-shadow: 0 0 15px #8a2be2;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        font-size: 22px;
+        color: #cccccc;
+        margin-bottom: 40px;
+    }
+
+    .loader {
+        border: 6px solid #333;
+        border-top: 6px solid #8a2be2;
+        border-radius: 50%;
+        width: 70px;
+        height: 70px;
+        animation: spin 1.2s linear infinite;
+        margin: 0 auto 20px auto;
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    .rules {
+        margin-top: 40px;
+        font-size: 16px;
+        color: #bbbbbb;
+    }
+
+    .rules ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .rules li {
+        margin: 6px 0;
+    }
+
+    .footer {
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+        text-align: center;
+        color: #555;
+        font-size: 14px;
+    }
+</style>
+</head>
+<body>
+
+<div class="center">
+    <h1>Nightfall Syndicate</h1>
+    <h2>TTT Server lädt...</h2>
+
+    <div class="loader"></div>
+
+    <div class="rules">
+        <strong>Regeln:</strong>
+        <ul>
+            <li>Kein RDM</li>
+            <li>Kein Ghosting</li>
+            <li>Kein Cheating</li>
+            <li>Respektvoller Umgang</li>
+            <li>Folge den Anweisungen der Admins</li>
+        </ul>
+    </div>
+</div>
+
+<div class="footer">
+    © Nightfall Syndicate – Have Fun & Stay Vigilant
+</div>
+
+</body>
+</html>
