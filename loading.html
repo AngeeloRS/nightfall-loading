@@ -13,6 +13,20 @@
         overflow: hidden;
     }
 
+    /* Hintergrundbild mit 50% Transparenz */
+    .background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('https://scontent-fra3-1.xx.fbcdn.net/v/t39.30808-6/500287603_680595361274321_6477217872789469859_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=53a332&_nc_ohc=nHsb6kAChFUQ7kNvwEue3NU&_nc_oc=AdmIIhM6rBqN1TPVhWNSJ2FTHtzBUPEn-ZuK_1ZoACJ2VQmm1o45o6N0Kq0yd6R89Z8&_nc_zt=23&_nc_ht=scontent-fra3-1.xx&_nc_gid=BFPCoBlrroPeMDw0PYXqUg&_nc_ss=8&oh=00_Afwr23HxetOTniZKlXoYh0G1V5UGwF_cEAaUujt31ap8Ng&oe=69B63C3E');
+        background-size: cover;
+        background-position: center;
+        opacity: 0.5; /* 50% transparent */
+        z-index: -1;
+    }
+
     .center {
         position: absolute;
         top: 50%;
@@ -51,52 +65,4 @@
 
     .rules {
         margin-top: 40px;
-        font-size: 16px;
-        color: #bbbbbb;
-    }
-
-    .rules ul {
-        list-style: none;
-        padding: 0;
-    }
-
-    .rules li {
-        margin: 6px 0;
-    }
-
-    .footer {
-        position: absolute;
-        bottom: 20px;
-        width: 100%;
-        text-align: center;
-        color: #555;
-        font-size: 14px;
-    }
-</style>
-</head>
-<body>
-
-<div class="center">
-    <h1>Nightfall Syndicate</h1>
-    <h2>TTT Server lädt...</h2>
-
-    <div class="loader"></div>
-
-    <div class="rules">
-        <strong>Regeln:</strong>
-        <ul>
-            <li>Kein RDM</li>
-            <li>Kein Ghosting</li>
-            <li>Kein Cheating</li>
-            <li>Respektvoller Umgang</li>
-            <li>Folge den Anweisungen der Admins</li>
-        </ul>
-    </div>
-</div>
-
-<div class="footer">
-    © Nightfall Syndicate – Have Fun & Stay Vigilant
-</div>
-
-</body>
-</html>
+       
