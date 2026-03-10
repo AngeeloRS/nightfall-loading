@@ -7,35 +7,65 @@
     body {
         margin: 0;
         padding: 0;
-        background: #0b0b0f;
+        background: #000;
         font-family: Arial, sans-serif;
         color: #e0e0e0;
         overflow: hidden;
     }
 
-    /* Hintergrundbild optimiert: Gesicht sichtbar */
-    .background {
+    /* Container für Bild + Seitenverläufe */
+    .bg-wrapper {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: url('https://raw.githubusercontent.com/AngeeloRS/nightfall-loading/refs/heads/main/background.jpg');
-        background-size: cover;
-        background-position: top center; /* Fokus nach oben verschoben */
-        filter: blur(5px) brightness(0.65);
-        opacity: 0.55;
+        overflow: hidden;
         z-index: -2;
     }
 
-    /* Lila Overlay */
-    .overlay {
+    /* Bild zentriert, nicht verzerrt */
+    .background {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 100%;
+        width: auto;
+        filter: blur(4px) brightness(0.75);
+        opacity: 0.9;
+    }
+
+    /* Linker Verlauf */
+    .left-fade {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 25%;
+        height: 100%;
+        background: linear-gradient(to right, #000 60%, transparent);
+        z-index: -1;
+    }
+
+    /* Rechter Verlauf */
+    .right-fade {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 25%;
+        height: 100%;
+        background: linear-gradient(to left, #000 60%, transparent);
+        z-index: -1;
+    }
+
+    /* Lila Glow nur auf Hintergrund */
+    .purple-glow {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(138, 43, 226, 0.25);
+        background: rgba(138, 43, 226, 0.15);
         z-index: -1;
     }
 
@@ -102,8 +132,13 @@
 </head>
 <body>
 
-<div class="background"></div>
-<div class="overlay"></div>
+<div class="bg-wrapper">
+    <img class="background" src="https://raw.githubusercontent.com/AngeeloRS/nightfall-loading/refs/heads/main/background.jpg">
+    <div class="left-fade"></div>
+    <div class="right-fade"></div>
+</div>
+
+<div class="purple-glow"></div>
 
 <div class="center">
     <h1>Nightfall Syndicate</h1>
