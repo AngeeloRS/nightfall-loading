@@ -13,17 +13,29 @@
         overflow: hidden;
     }
 
-    /* Hintergrundbild mit 50% Transparenz */
+    /* Hintergrundbild mit Blur + Abdunklung + Transparenz */
     .background {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: background-image: url('https://raw.githubusercontent.com/angeelors/nightfall-loading/main/background.jpg');
+        background-image: url('https://raw.githubusercontent.com/AngeeloRS/nightfall-loading/refs/heads/main/background.jpg');
         background-size: cover;
         background-position: center;
-        opacity: 0.5; /* 50% transparent */
+        filter: blur(6px) brightness(0.6);
+        opacity: 0.55;
+        z-index: -2;
+    }
+
+    /* Lila Overlay für Nightfall-Look */
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(138, 43, 226, 0.25);
         z-index: -1;
     }
 
@@ -37,20 +49,20 @@
 
     h1 {
         font-size: 48px;
-        color: #8a2be2;
-        text-shadow: 0 0 15px #8a2be2;
+        color: #b57bff;
+        text-shadow: 0 0 20px #8a2be2;
         margin-bottom: 10px;
     }
 
     h2 {
         font-size: 22px;
-        color: #cccccc;
+        color: #d8d8d8;
         margin-bottom: 40px;
     }
 
     .loader {
         border: 6px solid #333;
-        border-top: 6px solid #8a2be2;
+        border-top: 6px solid #b57bff;
         border-radius: 50%;
         width: 70px;
         height: 70px;
@@ -65,4 +77,55 @@
 
     .rules {
         margin-top: 40px;
-       
+        font-size: 16px;
+        color: #e0e0e0;
+    }
+
+    .rules ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .rules li {
+        margin: 6px 0;
+    }
+
+    .footer {
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+        text-align: center;
+        color: #bbbbbb;
+        font-size: 14px;
+    }
+</style>
+</head>
+<body>
+
+<div class="background"></div>
+<div class="overlay"></div>
+
+<div class="center">
+    <h1>Nightfall Syndicate</h1>
+    <h2>TTT Server lädt...</h2>
+
+    <div class="loader"></div>
+
+    <div class="rules">
+        <strong>Regeln:</strong>
+        <ul>
+            <li>Kein RDM</li>
+            <li>Kein Ghosting</li>
+            <li>Kein Cheating</li>
+            <li>Respektvoller Umgang</li>
+            <li>Folge den Anweisungen der Admins</li>
+        </ul>
+    </div>
+</div>
+
+<div class="footer">
+    © Nightfall Syndicate – Stay Vigilant
+</div>
+
+</body>
+</html>
